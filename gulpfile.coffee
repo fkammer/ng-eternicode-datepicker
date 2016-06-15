@@ -8,10 +8,10 @@ rename = require 'gulp-rename'
 gulp.task 'build', ->
   gulp.src './src/*.coffee'
     .pipe coffee()
-    .pipe concat 'ng-datepicker.js'
+    .pipe concat 'ng-eternicode-datepicker.js'
     .pipe gulp.dest './dist'
     .pipe uglify()
-    .pipe rename 'ng-datepicker.min.js'
+    .pipe rename 'ng-eternicode-datepicker.min.js'
     .pipe gulp.dest './dist'
 
 gulp.task 'watch', ->
