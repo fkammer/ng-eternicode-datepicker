@@ -26,6 +26,7 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "angular": ">=1 <2"
+    "angular": ">=1 <2",
+    "bootstrap-datepicker": "1.6.1"
   }
 }
