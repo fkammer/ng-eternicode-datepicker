@@ -1,0 +1,28 @@
+{
+  "name": "ng-eternicode-datepicker",
+  "description": "Angular wrapper for the awesome bootstrap-datepicker by @eternicode",
+  "main": "./dist/ng-datepicker.js",
+  "authors": [
+    "Frederik Kammer <frederik.kammer@osnaware.de>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "datepicker",
+    "bootstrap",
+    "eternicode"
+  ],
+  "homepage": "https://github.com/fkammer/ng-eternicode-datepicker#readme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "lib",
+    "test",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": ">=1 <2"
+  }
+}
