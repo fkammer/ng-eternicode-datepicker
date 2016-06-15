@@ -13,7 +13,7 @@
     "bootstrap",
     "eternicode"
   ],
-  "homepage": "https://github.com/fkammer/ng-eternicode-datepicker#readme",
+  "homepage": "https://fkammer.github.io/ng-eternicode-datepicker/",
   "ignore": [
     "**/.*",
     "node_modules",

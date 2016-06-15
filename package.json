@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/fkammer/ng-eternicode-datepicker/issues"
   },
-  "homepage": "https://github.com/fkammer/ng-eternicode-datepicker#readme",
+  "homepage": "https://fkammer.github.io/ng-eternicode-datepicker/",
   "engines": {
     "node": ">=0.10.0"
   },
