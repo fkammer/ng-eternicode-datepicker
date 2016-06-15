@@ -27,13 +27,13 @@ The original `bootstrap-datepicker` files have to be included first. These files
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="bower_components/ng-eternicode-datepicker/dist/ng-eternicode-datepicker.js"></script>
 ```
-If you want to use other language remember to include the appropriate bootstrap-datepicker language file. For example:
+If you want to use a different language remember to include the appropriate bootstrap-datepicker language file. For example:
 ```html
 <script src="bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min.js"></script>
 ```
 
 ## Usage
-Remember to add the module `fk.eternicode-datepicker`as a dependency to your angular module:
+Remember to add the module `fk.eternicode-datepicker` as a dependency to your angular module:
 ```js
 angular.module('yourApp', ['fk.eternicode-datepicker']);
 ```
@@ -69,7 +69,8 @@ As the `bootstrap-datepicker` changes the value of the input field, this would m
 ## Options
 Too pass additional datepicker options use the `dp-options` attribute:
 ```html
-<div datepicker ng-model="dateInput" dp-option="datepickerOptions">
+<div datepicker ng-model="dateInput" dp-options="datepickerOptions">
+  <!-- dp-options not ng-options! -->
   <input type="text" class="form-control">
 </div>
 ```
@@ -102,5 +103,5 @@ Ofcourse you could override or extend your defaults with the `dp-options` attrib
  - Tests
  - Angular form validation
 
-## Licence
+## License
 MIT
