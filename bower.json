@@ -22,7 +22,8 @@
     "lib",
     "test",
     "package.json",
-    "example.html"
+    "example.html",
+    "gulpfile.coffee"
   ],
   "dependencies": {
     "angular": ">=1 <2",

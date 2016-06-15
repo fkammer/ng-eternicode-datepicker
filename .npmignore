@@ -4,3 +4,4 @@ test/
 src/
 bower.json
 example.html
+gulpfile.coffee
