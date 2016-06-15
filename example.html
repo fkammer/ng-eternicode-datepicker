@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Bootstrap Datepicker Demo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css">
+  </head>
+
+  <body ng-app="dp-demo">
+    <div class='container' ng-controller="AppCtrl">
+      <h1 class="page-header">Datepicker Demo</h1>
+
+      <div class="row">
+        <h2>Text input</h2>
+        <div class="col-md-6">
+          <form name="form1">
+            <div class="form-group">
+              <label class="control-label">Date:</label>
+              <div datepicker dp-options="dpOptions" ng-model="date1">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <strong>Value:</strong><br>
+          <pre>{{ date1 }}</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2>Component</h2>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label class="control-label">Date:</label>
+              <div class="input-group date" datepicker ng-model='date2'>
+                <input type="text" class="form-control">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-th"></i>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <strong>Value:</strong><br>
+          <pre>{{ date2 }}</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <h2>Embedded / Inline</h2>
+        <div class="col-md-6">
+          <div datepicker ng-model='date3'></div>
+        </div>
+        <div class="col-md-6">
+          <strong>Value:</strong><br>
+          <pre>{{ date3 }}</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-inline pull-right">
+            <li>
+              <button class="btn btn-default" ng-click="setAll2Current()">All 2 Today</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="dist/ng-datepicker.js"></script>
+    <script type="application/javascript">
+      angular
+        .module('dp-demo', ['fk.eternicode-datepicker'])
+        .controller('AppCtrl', function($scope) {
+          $scope.dpOptions = {
+            format: 'dd.mm.yyyy',
+            assumeNearbyYear: true,
+            autoclose: true,
+            todayHighlight: true,
+          };
+
+          $scope.setAll2Current = function() {
+            $scope.date1 = $scope.date2 = $scope.date3 = new Date()
+          };
+
+          $scope.isDate = function (date) {
+            return date instanceof Date
+          };
+        });
+    </script>
+  </body>
+</html>

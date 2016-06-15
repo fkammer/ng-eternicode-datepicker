@@ -20,10 +20,14 @@
     "src",
     "lib",
     "test",
-    "package.json"
+    "package.json",
+    "example.html"
   ],
   "dependencies": {
     "angular": ">=1 <2",
     "bootstrap-datepicker": "1.6.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
   }
 }
