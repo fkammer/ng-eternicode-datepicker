@@ -79,7 +79,12 @@
     <script type="application/javascript">
       angular
         .module('dp-demo', ['fk.eternicode-datepicker'])
-        .controller('AppCtrl', function($scope) {
+        .config(function (datepickerDefaultsProvider) {
+          datepickerDefaultsProvider.setDefaultOptions({
+            todayHighlight: true
+          });
+        })
+        .controller('AppCtrl', function ($scope) {
           $scope.dpOptions = {
             format: 'dd.mm.yyyy',
             assumeNearbyYear: true,
