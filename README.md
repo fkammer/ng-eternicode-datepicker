@@ -1,4 +1,4 @@
-# ng-eternicode-datepicker
+# ng-eternicode-datepicker [![GitHub version](https://badge.fury.io/gh/fkammer%2Fng-eternicode-datepicker.svg)](https://badge.fury.io/gh/fkammer%2Fng-eternicode-datepicker) [![npm version](https://badge.fury.io/js/ng-eternicode-datepicker.svg)](https://badge.fury.io/js/ng-eternicode-datepicker) [![Bower version](https://badge.fury.io/bo/ng-eternicode-datepicker.svg)](https://badge.fury.io/bo/ng-eternicode-datepicker) 
 AngularJS wrapper for the awesome [bootstrap-datepicker](https://github.com/eternicode/bootstrap-datepicker) by [@eternicode](https://github.com/eternicode).
 
 ## Installation
