@@ -67,7 +67,7 @@ As the `bootstrap-datepicker` changes the value of the input field, this would m
 *Currently not supported*.
 
 ## Options
-Too pass additional datepicker options use the `dp-options` attribute:
+To pass additional datepicker options use the `dp-options` attribute:
 ```html
 <div datepicker ng-model="dateInput" dp-options="datepickerOptions">
   <!-- dp-options not ng-options! -->
