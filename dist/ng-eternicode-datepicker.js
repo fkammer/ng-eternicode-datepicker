@@ -58,9 +58,7 @@
               newDate = new Date(newValue);
               oldDate = dpElem.datepicker('getUTCDate');
               if ((oldDate == null) || newDate.getTime() !== oldDate.getTime()) {
-                return $timeout(function() {
-                  return dpElem.datepicker('setUTCDate', newDate);
-                });
+                return dpElem.datepicker('setUTCDate', newDate);
               }
             }
           });
