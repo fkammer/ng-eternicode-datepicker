@@ -58,5 +58,6 @@ angular
             newDate = new Date newValue
             oldDate = dpElem.datepicker 'getUTCDate'
             if not oldDate? or newDate.getTime() isnt oldDate.getTime()
-              dpElem.datepicker 'setUTCDate', newDate
+              $timeout ->
+                dpElem.datepicker 'setUTCDate', newDate
   ]
