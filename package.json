@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "angular": ">=1 <2",
-    "bootstrap-datepicker": "1.6.1"
+    "bootstrap-datepicker": "1.6.4"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0",

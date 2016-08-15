@@ -34,14 +34,10 @@ angular
         # Initialize datepicker
         dpOptions = $.extend true, {}, datepickerDefaults, scope.dpOptions
         dpElem.datepicker dpOptions
-          .on 'changeDate', ->
-            # Write selected date as UTC to ngModel
-            date = dpElem.datepicker 'getUTCDate'
-            date.setUTCHours 0, 0, 0, 0, 0
-
+          .on 'changeDate', (e) ->
             $timeout ->
               scope.$apply ->
-                scope.ngModel = date
+                scope.ngModel = e.date
 
           .on 'clearDate', ->
             $timeout ->
@@ -56,7 +52,8 @@ angular
           # isn't entering something right now
           if newValue? and not isFocused()
             newDate = new Date newValue
-            oldDate = dpElem.datepicker 'getUTCDate'
+            oldDate = dpElem.datepicker 'getDate'
             if not oldDate? or newDate.getTime() isnt oldDate.getTime()
-              dpElem.datepicker 'setUTCDate', newDate
+              dpElem.datepicker 'setDate', newDate
   ]
+

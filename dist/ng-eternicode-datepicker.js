@@ -33,13 +33,10 @@
             dpElem = elem;
           }
           dpOptions = $.extend(true, {}, datepickerDefaults, scope.dpOptions);
-          dpElem.datepicker(dpOptions).on('changeDate', function() {
-            var date;
-            date = dpElem.datepicker('getUTCDate');
-            date.setUTCHours(0, 0, 0, 0, 0);
+          dpElem.datepicker(dpOptions).on('changeDate', function(e) {
             return $timeout(function() {
               return scope.$apply(function() {
-                return scope.ngModel = date;
+                return scope.ngModel = e.date;
               });
             });
           }).on('clearDate', function() {
@@ -56,9 +53,9 @@
             var newDate, oldDate;
             if ((newValue != null) && !isFocused()) {
               newDate = new Date(newValue);
-              oldDate = dpElem.datepicker('getUTCDate');
+              oldDate = dpElem.datepicker('getDate');
               if ((oldDate == null) || newDate.getTime() !== oldDate.getTime()) {
-                return dpElem.datepicker('setUTCDate', newDate);
+                return dpElem.datepicker('setDate', newDate);
               }
             }
           });
