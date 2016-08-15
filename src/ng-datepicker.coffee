@@ -34,7 +34,7 @@ angular
         # Initialize datepicker
         dpOptions = $.extend true, {}, datepickerDefaults, scope.dpOptions
         dpElem.datepicker dpOptions
-          .on 'changeDate', e ->
+          .on 'changeDate', (e) ->
             $timeout ->
               scope.$apply ->
                 scope.ngModel = e.date

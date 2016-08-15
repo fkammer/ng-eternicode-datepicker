@@ -33,7 +33,7 @@
             dpElem = elem;
           }
           dpOptions = $.extend(true, {}, datepickerDefaults, scope.dpOptions);
-          dpElem.datepicker(dpOptions).on('changeDate', function() {
+          dpElem.datepicker(dpOptions).on('changeDate', function(e) {
             return $timeout(function() {
               return scope.$apply(function() {
                 return scope.ngModel = e.date;
