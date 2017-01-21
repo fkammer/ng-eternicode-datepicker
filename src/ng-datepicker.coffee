@@ -42,11 +42,12 @@ angular
             $timeout ->
               scope.$apply ->
                 scope.ngModel = date
+                ngModel.$setViewValue(date)
 
           .on 'clearDate', ->
             $timeout ->
               scope.$apply ->
-                scope.ngModel = null
+                ngModel.$setViewValue(null)
 
         isFocused = ->
           dpElem.is(':focus') or dpElem.children('input').first().is(':focus')
